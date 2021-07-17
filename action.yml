@@ -1,0 +1,15 @@
+name: Setup Yarn
+description: Reduce boilerplate when installing setting up Node.js and installing Yarn dependencies.
+# inputs:
+#   immutableCache:
+#     description: When true, uses the --immutable-cache
+#     required: true
+#     default: true
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+    - run: yarn install --immutable --immutable-cache
