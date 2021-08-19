@@ -1,5 +1,9 @@
 name: Setup Yarn
 description: Reduce boilerplate when installing setting up Node.js and installing Yarn dependencies.
+author: Mark Skelton
+branding:
+  icon: play
+  color: blue
 inputs:
   flags:
     description: Additional flags to pass to the install command.
