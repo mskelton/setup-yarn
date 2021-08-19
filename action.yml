@@ -1,13 +1,13 @@
 name: Setup Yarn
 description: Reduce boilerplate when installing setting up Node.js and installing Yarn dependencies.
 inputs:
-  ref:
-    description: Git ref to checkout. Passed to `actions/checkout`.
+  flags:
+    description: Additional flags to pass to the install command.
   nodeVersion:
     description: Node version to use, defaults to the current LTS version.
     default: '14.x'
-  flags:
-    description: Additional flags to pass to the install command.
+  ref:
+    description: Git ref to checkout. Passed to `actions/checkout`.
 runs:
   using: "composite"
   steps:
