@@ -9,11 +9,11 @@ inputs:
     description: Additional flags to pass to the install command.
   node-version:
     description: Node version to use, defaults to the current LTS version.
-    default: '16.x'
+    default: "16.x"
   ref:
     description: Git ref to checkout. Passed to `actions/checkout`.
   cache:
-    description: Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm
+    description: "Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm"
     default: yarn
 runs:
   using: "composite"
