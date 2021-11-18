@@ -12,6 +12,9 @@ inputs:
     default: '16.x'
   ref:
     description: Git ref to checkout. Passed to `actions/checkout`.
+  cache:
+    description: Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm
+    default: yarn
 runs:
   using: "composite"
   steps:
@@ -21,7 +24,7 @@ runs:
     - uses: actions/setup-node@v2
       with:
         node-version: ${{ inputs.node-version }}
-        cache: yarn
+        cache: ${{ inputs.cache }}
     - name: Install dependencies
       run: yarn install --immutable ${{ inputs.flags }}
       shell: bash
