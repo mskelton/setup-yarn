@@ -21,7 +21,7 @@ Reduce boilerplate when installing setting up Node.js and installing Yarn depend
 ```yml
 - uses: mskelton/setup-yarn@v1
   with:
-   node-version: 16.x
+   node-version: '16.x'
 ```
 
 ## Pass additional flags to the install command
@@ -29,5 +29,5 @@ Reduce boilerplate when installing setting up Node.js and installing Yarn depend
 ```yml
 - uses: mskelton/setup-yarn@v1
   with:
-   flags: --immutable
+   flags: --immutable-cache
 ```
