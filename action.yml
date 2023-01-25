@@ -9,7 +9,7 @@ inputs:
     description: Additional flags to pass to the install command.
   node-version:
     description: Node version to use, defaults to the current LTS version.
-    default: "16.x"
+    default: "18.x"
   ref:
     description: Git ref to checkout. Passed to `actions/checkout`.
   cache:
