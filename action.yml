@@ -15,12 +15,15 @@ inputs:
   cache:
     description: "Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm"
     default: yarn
+  fetch-depth:
+    description: Fetch depth of the checkout. Passed to `actions/checkout`.
 runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v3
       with:
         ref: ${{ inputs.ref }}
+        fetch-depth: ${{ inputs.fetch-depth }}
     - uses: actions/setup-node@v3
       with:
         node-version: ${{ inputs.node-version }}
