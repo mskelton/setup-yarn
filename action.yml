@@ -9,7 +9,7 @@ inputs:
     description: Additional flags to pass to the install command.
   node-version:
     description: Node version to use, defaults to the current LTS version.
-    default: "18.x"
+    default: "20.x"
   ref:
     description: Git ref to checkout. Passed to `actions/checkout`.
   cache:
@@ -24,7 +24,7 @@ runs:
       with:
         ref: ${{ inputs.ref }}
         fetch-depth: ${{ inputs.fetch-depth }}
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
         cache: ${{ inputs.cache }}
