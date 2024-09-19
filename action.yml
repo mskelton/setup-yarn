@@ -12,9 +12,6 @@ inputs:
     default: "20.x"
   ref:
     description: Git ref to checkout. Passed to `actions/checkout`.
-  cache:
-    description: "Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm"
-    default: yarn
   fetch-depth:
     description: Fetch depth of the checkout. Passed to `actions/checkout`.
 runs:
@@ -27,7 +24,9 @@ runs:
     - uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
-        cache: ${{ inputs.cache }}
+    - name: Enable corepack
+      shell: bash
+      run: corepack enable
     - name: Install dependencies
       run: yarn install --immutable ${{ inputs.flags }}
       shell: bash

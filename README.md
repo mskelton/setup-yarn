@@ -5,13 +5,13 @@ Reduce boilerplate when installing setting up Node.js and installing Yarn depend
 ## Usage
 
 ```yml
-- uses: mskelton/setup-yarn@v1
+- uses: mskelton/setup-yarn@v3
 ```
 
 ## Checkout a specific Git ref
 
 ```yml
-- uses: mskelton/setup-yarn@v1
+- uses: mskelton/setup-yarn@v3
   with:
    ref: ${{ github.head_ref }}
 ```
@@ -19,7 +19,7 @@ Reduce boilerplate when installing setting up Node.js and installing Yarn depend
 ## Specify Node version
 
 ```yml
-- uses: mskelton/setup-yarn@v1
+- uses: mskelton/setup-yarn@v3
   with:
    node-version: '16.x'
 ```
@@ -27,7 +27,7 @@ Reduce boilerplate when installing setting up Node.js and installing Yarn depend
 ## Pass additional flags to the install command
 
 ```yml
-- uses: mskelton/setup-yarn@v1
+- uses: mskelton/setup-yarn@v3
   with:
    flags: --immutable-cache
 ```
